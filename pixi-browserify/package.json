@@ -1,0 +1,14 @@
+{
+  "name": "pixi-browserify-example",
+  "version": "1.0.0",
+  "description": "A simple setup demonstrating how to use pixi.js with browserify",
+  "scripts": {
+    "build": "node node_modules/browserify/bin/cmd main.js -o bundle.js"
+  },
+  "main": "main.js",
+  "author": "Lukas Taegert",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.0"
+  }
+}
