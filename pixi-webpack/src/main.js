@@ -1,4 +1,4 @@
-const PIXI = require('pixi.js');
+import PIXI from 'pixi.js';
 
 const renderer = new PIXI.autoDetectRenderer();
 document.body.appendChild(renderer.view);

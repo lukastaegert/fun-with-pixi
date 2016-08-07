@@ -1,5 +1,7 @@
 # Pixi example using browserify
 
+You need to install `node` first, preferably via `nvm`.
+
 Run and build with
 ```
 npm install
