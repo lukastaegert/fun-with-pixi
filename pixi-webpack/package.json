@@ -1,0 +1,21 @@
+{
+  "name": "pixi-webpack-example",
+  "version": "1.0.0",
+  "description": "A simple setup demonstrating how to use pixi.js with webpack",
+  "scripts": {
+    "build": "node node_modules/.bin/webpack"
+  },
+  "main": "main.js",
+  "author": "Lukas Taegert",
+  "license": "ISC",
+  "devDependencies": {
+    "brfs": "^1.4.3",
+    "browserify-versionify": "^1.0.6",
+    "json-loader": "^0.5.4",
+    "transform-loader": "^0.2.3",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "pixi.js": "^3.0.11"
+  }
+}
