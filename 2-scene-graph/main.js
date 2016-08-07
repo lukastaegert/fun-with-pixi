@@ -4,10 +4,10 @@ document.body.appendChild(renderer.view);
 
 const stage = new PIXI.Container();
 
-function getCircle(centerX, centerY, size, color) {
+function getCircle(centerX, centerY, radius, color) {
   return new PIXI.Graphics()
     .beginFill(color)
-    .drawCircle(centerX, centerY, size)
+    .drawCircle(centerX, centerY, radius)
     .endFill();
 }
 
