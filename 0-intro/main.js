@@ -22,9 +22,9 @@ stage.addChild(logoContainer);
 let isLogoRotating = false;
 
 const loader = new PIXI.loaders.Loader()
-  .add('pixi-logo.png')
-  .add('cats.json')
-  .add('tng.png')
+  .add('../0-intro/pixi-logo.png')
+  .add('../0-intro/cats.json')
+  .add('../0-intro/tng.png')
   .once('complete', setupBackground)
   .once('complete', setupLogo)
   .load();
@@ -42,11 +42,12 @@ function updateCanvasSize() {
 let cats = [];
 let currentCatSpriteIndex = 0;
 
-updateCanvasSize();
+// Reveal does some weird resizing upon initialization
+setTimeout(updateCanvasSize);
 performAnimationLoop();
 
 function setupBackground() {
-  const tngLogo = PIXI.Sprite.fromFrame('tng.png');
+  const tngLogo = PIXI.Sprite.fromFrame('../0-intro/tng.png');
   tngLogo.scale.set(0.5, 0.5);
   tngLogo.position.set(-tngLogo.width / 2, -tngLogo.height - 10);
   backgroundContainer.addChild(tngLogo);
@@ -62,7 +63,7 @@ function setupBackground() {
 }
 
 function setupLogo() {
-  const logoSprite = PIXI.Sprite.fromFrame('pixi-logo.png');
+  const logoSprite = PIXI.Sprite.fromFrame('../0-intro/pixi-logo.png');
   logoSprite.position.set(-logoSprite.width / 2, -logoSprite.height / 2);
   logoContainer.addChild(logoSprite);
   // without this flag, mouse events will not be passed to this container

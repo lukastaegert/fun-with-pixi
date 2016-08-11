@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Pixi.js</title>
+
+    <meta name="description" content="Pixi.js - denn Dein Canvas will mehr...">
+    <meta name="author" content="Lukas Taegert">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="style/presentation.css">
+    <script src="src/client/presentation.js"></script>
+    <script src="../0-intro/pixi.js"></script>
+</head>
+
+<!--
+  Wofür stehen die CSS-Klassen?
+  charred: Charred-Trail-Plugin aktivieren,
+  auto-fragment: alle <li> innerhalb von <ul> und <ol> in Fragments umwandeln, d.h. bei Tastendruck erst einblenden
+-->
+<body class="charred auto-fragment">
+
+    <div class="i18n">
+        <span class="section-overview">Übersicht</span>
+    </div>
+
+    <!-- Titel-Slide -->
+    <section>
+        <canvas class="pixi-demo-canvas" style="width: 100%; height: 80vh"></canvas>
+        <script src="../0-intro/main.js"></script>
+    </section>
+    <section>
+        <h2>Aufbau eines Pixi Projektes</h2>
+
+        <ul>
+            <li>Renderer verwaltet <code style="color:#0000FF;">&lt;canvas&gt;</code> Element</li>
+            <li>Szene = <code style="color:#0000FF;">PIXI.Container</code> - Objekt</li>
+            <li>Objekte mittels <code style="color:#0000FF;">.addChild</code> hinzufügen</li>
+            <li>Rendern!</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Animationen</h2>
+
+        <ul class="no-burn">
+            <li>Szene verändern</li>
+            <li>Rendern</li>
+            <li>Neuen Animation-Frame anfordern</li>
+            <li>Beginne von vorne</li>
+        </ul>
+    </section>
+    <section>
+        <h2>PIXI-Objekte</h2>
+
+        <ul class="no-burn">
+            <li><code style="color:#0000FF;">Container</code>: Hält andere Objekte</li>
+            <li><code style="color:#0000FF;">Graphics</code>: Vektorgrafiken</li>
+            <li><code style="color:#0000FF;">Sprite</code>: Bild mit Textur</li>
+            <li><code style="color:#0000FF;">Text</code>: Textobjekt, intern als Sprite gerendert</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Scene-Graph</h2>
+
+        <ul class="no-burn">
+            <li>Alle Objekte sind auch Container!</li>
+            <li>Kinder werden in Container-Koordinaten platziert</li>
+            <li>Transformationen beeinflussen alle Kinder</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Externe Ressourcen</h2>
+
+        <ul class="no-burn">
+            <li>Asynchron geladen mittels <code style="color:#0000FF;">PIXI.loaders.Loader</code></li>
+            <li>Für Bilder und Spritesheets</li>
+            <li>Einzelbilder automatisch in <code style="color:#0000FF;">PIXI.utils.TextureCache</code></li>
+            <li>Neue Sprites mit <code style="color:#0000FF;">PIXI.Sprite.fromFrame</code></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Interaktion</h2>
+
+        <ul class="no-burn">
+            <li>Objekte müssen <code style="color:#0000FF;">.interactive=true</code> sein</li>
+            <li><code>node</code>-style Events (<code>.on</code>, <code>.once</code>...)</li>
+            <li>Eventnamen wie im Browser (<code>mousemove</code>, <code>click</code>...)</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Tests</h2>
+
+        <ul class="no-burn">
+            <li>Pixi benötigt ein DOM mit <em>echtem</em> <code style="color:#0000FF;">&lt;canvas&gt;</code>-Element!</li>
+            <li>Karma + Mocha funktioniert gut, auch in PhantomJS</li>
+        </ul>
+    </section>
+
+    <!-- Danke Slide -->
+    <section>
+        <h1>Vielen Dank!</h1>
+
+        <p>
+            <a href="mailto:lukas.taegert@tngtech.com">lukas.taegert@tngtech.com</a>
+        </p>
+        <a href="http://www.tngtech.com"><img class="logo" src="img/tng.svg"></a>
+    </section>
+
+</body>
+</html>
