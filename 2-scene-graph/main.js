@@ -11,8 +11,20 @@ function getCircle(centerX, centerY, radius, color) {
     .endFill();
 }
 
-const circle = getCircle(0, 0, 200, 0xff0000);
+const circle = getCircle(100, 0, 200, 0xff0000);
 stage.addChild(circle);
+circle.position.set(WIDTH/2, HEIGHT/2);
+
+const innerCircle = getCircle(0,0,80,0x00ff00);
+circle.addChild(innerCircle);
+innerCircle.position.x = -100;
+innerCircle.scale.set(3, 2);
+
+const text = new PIXI.Text('Hallo TNG!', {fill: 0x0000ff});
+text.resolution = 3;
+innerCircle.addChild(text);
+
+text.position.x = -text.width/2;
 
 performAnimationLoop();
 

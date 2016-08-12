@@ -12,4 +12,14 @@ function setupStage() {
   const sprite = PIXI.Sprite.fromFrame('0');
   stage.addChild(sprite);
   renderer.render(stage);
+
+  sprite.interactive = true;
+  sprite.on('mouseover', () => {
+    sprite.filters = [new PIXI.filters.InvertFilter()];
+    renderer.render(stage);
+  });
+  sprite.on('mouseout', () => {
+    sprite.filters = null;
+    renderer.render(stage);
+  });
 }
