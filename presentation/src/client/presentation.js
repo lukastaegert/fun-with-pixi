@@ -24643,7 +24643,7 @@
 	/* Helper to generate an SVG text object.
 	   Obtain an instance from the SVGWrapper object.
 	   String calls together to generate the text and use its value:
-	   var text = root.createText();
+	   var text = root.createAboveLogo();
 	   root.text(null, x, y, text.string('This is ').
 	     span('red', {fill: 'red'}).string('!'), {fill: 'blue'}); */
 	function SVGText() {

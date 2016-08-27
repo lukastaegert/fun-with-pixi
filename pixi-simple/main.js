@@ -1,4 +1,3 @@
-import PIXI from 'pixi.js';
 const WIDTH = 800, HEIGHT = 600;
 
 const renderer = PIXI.autoDetectRenderer(WIDTH, HEIGHT);

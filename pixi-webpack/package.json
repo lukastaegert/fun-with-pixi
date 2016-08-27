@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "description": "A simple setup demonstrating how to use pixi.js with webpack",
   "scripts": {
-    "build": "node node_modules/.bin/webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "main": "main.js",
   "author": "Lukas Taegert",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
     "brfs": "^1.4.3",
     "browserify-versionify": "^1.0.6",
     "json-loader": "^0.5.4",
     "transform-loader": "^0.2.3",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
     "pixi.js": "^3.0.11"
